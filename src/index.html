@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html ng-app>
+<html>
 	<head>
 		<title>Angular js practice</title>
 		<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
 		<script type="text/javascript" src="../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script type="text/javascript" src="resources/js/app.js"></script>
 		<link rel="stylesheet" type="text/css" href="../../../node_modules/bootstrap/dist/css/bootstrap.css"/>
 	</head>
-	<body>
+	<body ng-app="MyApp">
 		<div>
 			<label>Name:</label>
 			<input type="text" ng-model="visitorname" placeholder="Tell us your name">
 			<br>
 			<hr>
 			<h1>Hey {{visitorname}} :)</h1>
+			<p>Small calculation length of name: {{visitorname.length}}</p>
 		</div>
-		<div><a href="resources/todoList/todo.html">Todo</a></div>
+		<div>Visitor name in Uppercase: {{visitorname|uppercase}}</div>
+		<hr>
+		<div>
+			<label for="checkbox">
+				<input id="checkbox" type="checkbox" ng-model="visible">Toggle me
+			</label>
+			<div show="visible">
+				<p>Hello World</p>
+			</div>
+		</div>
+		<hr>
+		<ul>
+			<li>
+				<div>
+					<a href="resources/todoList/todo.html">Todo</a>
+				</div>
+			</li>
+			<li>
+				<div>
+					<a href="resources/model default/model default value.html">model default value</a>
+				</div>
+			</li>
+		</ul>
+		
 	</body>
 </html>
